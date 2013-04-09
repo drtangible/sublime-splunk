@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>comment</key>
+  <string>Splunk</string>
+
+  <key>foldingStartMarker</key>
+  <string>/\*\*(?!\*)|\{\s*($|/\*(?!.*?\*/.*\S))</string>
+
+  <key>foldingStopMarker</key>
+  <string>(?&lt;!\*)\*\*/|^\s*\}</string>
+
+  <key>keyEquivalent</key>
+  <string>^~L</string>
+
+  <key>name</key>
+  <string>Splunk</string>
+
+  <key>patterns</key>
+  <array>
+    <dict>
+      <key>match</key>
+      <string>(sum|if|perc50|perc95|perc99|sourcetype|rex|eval|spath|rename|fillnull|stats|addinfo|monitord|table|replace)</string>
+
+      <key>name</key>
+      <string>keyword.splunk</string>
+
+      <key>settings</key>
+      <dict>
+        <key>fontStyle</key>
+        <string>bold</string>
+      </dict>
+    </dict>
+
+    <dict>
+      <key>match</key>
+      <string>(\w+)=</string>
+
+      <key>name</key>
+      <string>keyword.splunkVariable</string>
+
+      <key>settings</key>
+      <dict>
+        <key>fontStyle</key>
+        <string>italic</string>
+      </dict>
+    </dict>
+
+
+    <dict>
+      <key>begin</key>
+      <string>"</string>
+      <key>end</key>
+      <string>"</string>
+      <key>name</key>
+      <string>string.quoted.double.css</string>
+      <key>patterns</key>
+      <array>
+        <dict>
+          <key>match</key>
+          <string>\\.</string>
+          <key>name</key>
+          <string>constant.character.escaped.css</string>
+        </dict>
+      </array>
+    </dict>
+    <dict>
+      <key>begin</key>
+      <string>'</string>
+      <key>end</key>
+      <string>'</string>
+      <key>name</key>
+      <string>string.quoted.single.css</string>
+      <key>patterns</key>
+      <array>
+        <dict>
+          <key>match</key>
+          <string>\\.</string>
+          <key>name</key>
+          <string>constant.character.escaped.css</string>
+        </dict>
+      </array>
+    </dict>
+    <dict>
+      <key>begin</key>
+      <string>`</string>
+      <key>end</key>
+      <string>`</string>
+      <key>name</key>
+      <string>string.quoted.single.css markup.raw</string>
+      <key>patterns</key>
+      <array>
+        <dict>
+          <key>match</key>
+          <string>\\.</string>
+          <key>name</key>
+          <string>constant.character.escaped.css</string>
+        </dict>
+      </array>
+    </dict>
+    <dict>
+      <key>captures</key>
+      <dict>
+        <key>1</key>
+        <dict>
+          <key>name</key>
+          <string>entity.other.less.mixin</string>
+        </dict>
+      </dict>
+      <key>match</key>
+      <string>(\.(?![0-9])[a-zA-Z0-9_-]+(?=\())</string>
+    </dict>
+    <dict>
+      <key>captures</key>
+      <dict>
+        <key>1</key>
+        <dict>
+          <key>name</key>
+          <string>entity.other.attribute-name.class.css</string>
+        </dict>
+      </dict>
+      <key>match</key>
+      <string>(\.(?![0-9])[a-zA-Z0-9_-]+)</string>
+    </dict>
+  </array>
+
+  <key>scopeName</key>
+  <string>source.splunk</string>
+
+  <key>uuid</key>
+  <string>811b0ec4-9965-46dd-9c1b-34660db85bc3</string>
+</dict>
+</plist>
