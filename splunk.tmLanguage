@@ -5,6 +5,12 @@
   <key>comment</key>
   <string>Splunk</string>
 
+  <key>fileTypes</key>
+  <array>
+    <string>splq</string>
+    <string>splunk-query</string>
+  </array>
+
   <key>foldingStartMarker</key>
   <string>/\*\*(?!\*)|\{\s*($|/\*(?!.*?\*/.*\S))</string>
 
